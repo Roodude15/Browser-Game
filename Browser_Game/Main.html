@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="hand.minified-1.3.8.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+  <script src="ping.js"></script>
+  <link rel="stylesheet" href="style.css"></script>
+  <script src="First.html"></script>
+</head>
+<body>
+   <div id="arena">
+        <div id="score">
+            <h1>
+                <span id="playerScore">0</span>
+                -
+                <span id="opponentScore">0</span>
+            </h1>
+            <div><span id="FirstName">FirstName</span></div>
+            <div><span id="LastName">LastName</span></div>
+            <script>
+                var FirstName;
+                var LastName;
+                var playerScore;
+                var opponentScore;
+                function getData() {
+                        //gettting the values
+                        var FirstName = document.getElementById("FirstName").innerHTML = FirstName;
+                        var LastName= document.getElementById("LastName").innerHTML = LastName; 
+                        var playerScore= document.getElementById("playerScore").value; 
+                        var opponentScore= document.getElementById("opponentScore").value; 
+                        //saving the values in local storage
+                        localStorage.setItem("txtValue", FirstName);
+                        localStorage.setItem("txtValue1", LastName);
+                        localStorage.setItem("txtValue2", playerScore);
+                        localStorage.setItem("txtValue3", opponentScore);
+
+                        return;
+                    }
+
+                    //getData(); 
+            </script>
+
+            <form action="Dashboard.html" method="post"> 
+                <input type="submit" value="End Game" onclick="getdata()"> 
+            </form> 
+        </div>
+        <div id="player" class="sprite"></div>
+        <div id="opponent" class="sprite"></div>
+        <div id="ball" class="sprite"></div>
+        <div id="controls-left">
+            <div id="up" class="sprite control"></div>
+            <div id="down" class="sprite control"></div>
+        </div>
+        <div id="controls-right">
+            <div id="left" class="sprite control"></div>
+            <div id="right" class="sprite control"></div>
+        </div>
+    </div>
+</body>
+</html>

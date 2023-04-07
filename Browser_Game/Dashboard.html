@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script src="ping.js"></script>
+        <script src="First.html"></script>
+        <script src="Main.html"></script>
+		<title>Dashboard</title>
+        <style>
+            body {
+              background-color: greenyellow;  
+            }
+            h1 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+
+            form {
+                text-align: center;
+            }
+        </style>
+
+        <script>
+           document.getElementById("data").innerHTML=localStorage.getItem("txtValue");
+           document.getElementById("data1").innerHTML=localStorage.getItem("txtValue1");
+           document.getElementById("data2").innerHTML=localStorage.getItem("txtValue2");
+           document.getElementById("data3").innerHTML=localStorage.getItem("txtValue3");
+        </script>
+	</head>
+	<body>
+        <h1>Super Cool Awesome Web Browser Game</h1> <br>
+       <!-- 
+       <p>Player name is: <span id="data">FirstName</span> <span id="data1">LastName</span></p> <br>
+       <p>The score was: <span id="data2">playerScore</span>-<span id="data3">opponentScore</span></p><br>
+
+       -->
+
+       <p>What a great game by player, the score was great!</p>
+       <p>Click below to play again</p><br>
+       <form action="Main.html" method="post"> 
+        <input type="submit" value="Restart Game"> 
+        </form> 
+	</body>
+
+</html>
